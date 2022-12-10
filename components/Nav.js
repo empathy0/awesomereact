@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <nav className="flex justify-between items-center py-10">
       <Link href='/'>
-        <button className="text-lg font-medium">Creatinve Minds</button>
+        <button className="text-lg font-medium">Creative Minds</button>
       </Link>
       <ul className="flex items-center gap-10">
         {!user && (
@@ -18,10 +18,10 @@ export default function Nav() {
         {user &&(
           <div className="flex items-center gap-6">
             <Link href="/post">
-              <button>Post</button>
+              <button className="py-2 px-4 text-sm bg-cyan-500 text-white rounded-md font-medium ml-8">Post</button>
             </Link>
             <Link href="/dashboard">
-              <h1>Dashboard</h1>
+              <img className="w-12 rounded-full cursor-pointer" src={user.photoURL}/>
             </Link>
           </div>
         )
